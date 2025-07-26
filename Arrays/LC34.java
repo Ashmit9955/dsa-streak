@@ -1,12 +1,17 @@
 public class LC34{
 
     public static int[] Brute(int arr[] , int k){
-        int n = arr.length;
-        int result[] = {-1,-1};
+        int n = nums.length;
+        int result[] = {-1, -1};
         int num = 0;
-        for(int i=0; i<n;i++){
-            if(arr[i] == k){
-                result[num++] = i;
+        for(int i=0; i<n; i++){
+            if(nums[i] == target){
+                if(result[0] == -1){
+                    result[0] = i;
+                    result[1] = i;
+                }else{
+                    result[1] = i;
+                }
             }
         }
         return result;
